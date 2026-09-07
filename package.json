@@ -16,13 +16,14 @@
     "scripts": {
         "test": "jest",
         "dev": "tsx --watch src/app.ts",
-        "start": "node dist/app.js",
+        "start": "node dist/src/app.js",
         "build": "./node_modules/typescript-7/bin/tsc",
-        "type-check": "./node_modules/typescript-7/bin/tsc --noEmit",
+        "typeCheck": "./node_modules/typescript-7/bin/tsc --noEmit",
         "lint": "eslint .",
         "lint:fix": "eslint --fix .",
         "format": "prettier --write .",
-        "format:check": "prettier --check ."
+        "format:check": "prettier --check .",
+        "prepare": "husky"
     },
     "dependencies": {
         "dotenv": "^17.4.2",
@@ -36,6 +37,8 @@
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-perfectionist": "^5.11.0",
         "eslint-plugin-simple-import-sort": "^14.0.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^17.5.0",
         "prettier": "^3.9.6",
         "tsx": "^4.23.13",
         "typescript-7": "npm:typescript@^7.0.2",
@@ -46,5 +49,14 @@
     },
     "imports": {
         "#/*": "./src/*"
+    },
+    "lint-staged": {
+        ".{js,jsx,ts,tsx}": [
+            "eslint --fix",
+            "prettier --write"
+        ],
+        ".{json,md,css,scss,html,yaml,yml}": [
+            "prettier --write"
+        ]
     }
 }
