@@ -1,0 +1,12 @@
+{
+    "printWidth": 150,
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "tabWidth": 4,
+    "overrides": [
+        {
+            "files": ".prettierrc",
+            "options": { "parser": "json" }
+        }
+    ]
+}

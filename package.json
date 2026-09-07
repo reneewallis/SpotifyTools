@@ -1,0 +1,49 @@
+{
+    "name": "spotifytools",
+    "version": "1.0.0",
+    "description": "Tools I use for spotify",
+    "homepage": "https://github.com/reneewallis/SpotifyTools#readme",
+    "bugs": {
+        "url": "https://github.com/reneewallis/SpotifyTools/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/reneewallis/SpotifyTools.git"
+    },
+    "author": "Renee",
+    "type": "module",
+    "main": "app.ts",
+    "scripts": {
+        "test": "jest",
+        "dev": "tsx --watch src/app.ts",
+        "start": "node dist/app.js",
+        "build": "./node_modules/typescript-7/bin/tsc",
+        "type-check": "./node_modules/typescript-7/bin/tsc --noEmit",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "format": "prettier --write .",
+        "format:check": "prettier --check ."
+    },
+    "dependencies": {
+        "express": "^5.2.1"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@types/express": "^5.0.6",
+        "@types/node": "^26.4.1",
+        "eslint": "^10.10.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-perfectionist": "^5.11.0",
+        "eslint-plugin-simple-import-sort": "^14.0.0",
+        "prettier": "^3.9.6",
+        "tsx": "^4.23.13",
+        "typescript-7": "npm:typescript@^7.0.2",
+        "typescript-eslint": "^8.69.0"
+    },
+    "allowScripts": {
+        "esbuild@0.28.2": true
+    },
+    "imports": {
+        "#/*": "./src/*"
+    }
+}
